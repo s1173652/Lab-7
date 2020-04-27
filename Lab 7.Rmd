@@ -1,0 +1,45 @@
+---
+title: "Lab 7"
+author: Brianna Cirillo, Peter Ciliberto
+output: html_notebook
+---
+
+# Part I: Import and Look
+
+## Question 1
+
+```{r}
+quiz <- read.csv("quiz.csv")
+
+# Importing the data frame of quiz scores from quizzes 2 through 6
+```
+
+## Question 2
+
+```{r}
+plot(quiz)
+
+# Creating a pairs plot to look for association across quiz scores
+```
+
+
+# Part II: Every Quiz Is Exactly the Same?
+
+## Question 3
+
+```{r}
+plot(quiz$Q6, quiz$Q2)
+
+# Creating a scatter plot of the percentages on quiz 6 against quiz 2
+```
+
+## Question 4
+
+```{r}
+cor(quiz$Q6, quiz$Q2)
+
+# Computing the Pearson correlation between Quiz 2 and Quiz 6
+```
+
+There is a moderate positive correlation between quiz 2 and quiz 6.
+
